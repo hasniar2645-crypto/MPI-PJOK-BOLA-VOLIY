@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MPI PJOK VII — Bola Voli | HASNIAR, S.Pd.</title>
+<style>
+:root{--navy:#102a43;--blue:#1769aa;--cyan:#21b6c7;--gold:#ffc857;--paper:#f4f8fb;--ink:#17324d;--muted:#60758a;--green:#16845b;--red:#c0392b}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{background:linear-gradient(125deg,var(--navy),var(--blue));color:white;padding:24px clamp(16px,5vw,64px);display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}
+.brand{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:#bcecf1;font-weight:800}.hero h1{font-size:clamp(1.8rem,4vw,3.2rem);line-height:1.08;margin:8px 0}.hero p{max-width:680px;color:#e6f5ff;margin:8px 0}
+.pill{background:#ffffff20;border:1px solid #ffffff50;border-radius:999px;padding:8px 13px;font-size:.9rem}
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:22px;max-width:1280px;margin:24px auto;padding:0 18px}
+nav{align-self:start;position:sticky;top:12px;background:white;padding:12px;border-radius:18px;box-shadow:0 8px 24px #1232}
+nav button{width:100%;text-align:left;border:0;background:transparent;padding:11px 12px;border-radius:10px;color:var(--ink);font-weight:700;cursor:pointer;margin:2px 0}
+nav button:hover,nav button.active{background:#e7f7fa;color:#075c86}main{min-width:0}.panel{display:none;background:white;border-radius:20px;padding:clamp(18px,3vw,32px);box-shadow:0 8px 24px #1231;margin-bottom:18px}.panel.active{display:block}
+h2{color:var(--navy);margin-top:0;font-size:1.7rem}h3{color:#1769aa;margin-bottom:6px}.lead{font-size:1.08rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.card{border:1px solid #dce8ef;border-radius:16px;padding:16px;background:#fbfdff}.card strong{color:var(--navy)}.tag{display:inline-block;border-radius:7px;background:#e7f7fa;color:#075c86;font-size:.82rem;font-weight:800;padding:3px 8px;margin-bottom:8px}
+button.action{border:0;border-radius:10px;padding:11px 16px;background:var(--blue);color:white;font-weight:800;cursor:pointer;margin:5px 4px 5px 0}button.action.secondary{background:#e6eef5;color:var(--navy)}button.action.gold{background:var(--gold);color:#382b00}
+.question{padding:14px 0;border-bottom:1px solid #e4edf3}.question p{font-weight:750;margin:0 0 8px}.question label{display:block;padding:5px 0;cursor:pointer}.feedback{font-weight:800;margin-top:12px}.ok{color:var(--green)}.no{color:var(--red)}
+.callout{border-left:5px solid var(--cyan);padding:12px 16px;background:#effbfc;border-radius:0 12px 12px 0;margin:16px 0}
+.stage{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:center}.court{background:#e7f5e8;border:3px solid #23794b;border-radius:12px;padding:12px;max-width:500px}.court svg{width:100%;display:block}.controlrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.controlrow select,.controlrow input{padding:9px;border:1px solid #b9cad7;border-radius:9px}
+.progress{height:8px;background:#dbe7ee;border-radius:999px;overflow:hidden;margin:10px 0 18px}.progress span{display:block;height:100%;width:0;background:var(--cyan);transition:width .3s}
+footer{text-align:center;padding:22px;color:var(--muted);font-size:.9rem}
+@media(max-width:800px){.layout{grid-template-columns:1fr}nav{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}nav button{font-size:.9rem}.stage{grid-template-columns:1fr}}
+@media print{nav,header .pill,button{display:none!important}.layout{display:block}.panel{display:block!important;box-shadow:none;page-break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><div class="hero"><div class="brand">Media Pembelajaran Interaktif • PJOK Kelas VII</div><h1>Jelajah Teknik Dasar<br>Bola Voli</h1><p>Belajar, mencoba, memahami, dan merefleksikan teknik servis, passing bawah, smash, dan blocking dengan aman serta sportif.</p></div><div class="pill">HASNIAR, S.Pd. · SMP Negeri 8 Kolaka Utara</div></header>
+<div class="layout">
+<nav aria-label="Menu pembelajaran">
+<button class="active" data-page="apersepsi">01 · Apersepsi</button><button data-page="awal">02 · Asesmen Awal</button><button data-page="materi">03 · Materi Pokok</button><button data-page="simulasi">04 · Simulasi</button><button data-page="kuis">05 · Kuis</button><button data-page="akhir">06 · Asesmen Akhir</button><button data-page="refleksi">07 · Refleksi</button>
+<div class="callout" style="font-size:.85rem;margin:10px 2px">Ikuti menu secara berurutan. Jawaban dan skor dihitung di perangkat ini.</div>
+</nav>
+<main>
+<section id="apersepsi" class="panel active"><span class="tag">Mulai belajar</span><h2>Apersepsi: Bola Voli di Sekitar Kita</h2><p class="lead">Pernah melihat pertandingan bola voli atau bermain bersama teman? Pemain bekerja sama mengirim bola melewati net dengan teknik yang tepat.</p>
+<div class="grid"><div class="card"><div style="font-size:2rem">🏐</div><h3>Amati</h3><p>Perhatikan bagaimana pemain memulai rally, menerima bola, menyerang, dan menahan serangan.</p></div><div class="card"><div style="font-size:2rem">🤝</div><h3>Hubungkan</h3><p>Teknik yang baik membutuhkan koordinasi mata-tangan, keseimbangan, komunikasi, dan kerja sama.</p></div><div class="card"><div style="font-size:2rem">🛡️</div><h3>Utamakan aman</h3><p>Periksa lapangan, beri ruang gerak, gunakan bola yang sesuai, dan ikuti arahan guru.</p></div></div>
+<div class="callout"><strong>Pertanyaan pemantik:</strong> Jika bola datang rendah dan cepat ke arahmu, bagian tubuh mana yang sebaiknya digunakan untuk menerimanya? Mengapa?</div>
+<label for="pemantik"><strong>Tulis jawabanmu:</strong></label><textarea id="pemantik" rows="3" style="width:100%;padding:12px;border:1px solid #c4d5e0;border-radius:10px" placeholder="Menurut saya..."></textarea>
+<button class="action" onclick="saveText('pemantik','pemantikSaved')">Simpan jawaban</button><span id="pemantikSaved" class="feedback"></span>
+<div><button class="action" onclick="go('awal')">Lanjut ke asesmen awal →</button></div></section>
+
+<section id="awal" class="panel"><span class="tag">Cek pengetahuan awal</span><h2>Asesmen Awal</h2><p class="lead">Pilih satu jawaban terbaik untuk setiap pertanyaan. Ini bukan nilai akhir—gunakan untuk mengetahui hal yang perlu dipelajari.</p>
+<form id="formAwal">
+<div class="question"><p>1. Pukulan untuk memulai permainan disebut …</p><label><input type="radio" name="a1" value="a"> Passing</label><label><input type="radio" name="a1" value="b"> Servis</label><label><input type="radio" name="a1" value="c"> Blocking</label></div>
+<div class="question"><p>2. Saat menerima bola rendah, teknik yang umum digunakan adalah …</p><label><input type="radio" name="a2" value="a"> Passing bawah</label><label><input type="radio" name="a2" value="b"> Smash</label><label><input type="radio" name="a2" value="c"> Servis atas</label></div>
+<div class="question"><p>3. Upaya membendung serangan lawan di dekat net disebut …</p><label><input type="radio" name="a3" value="a"> Passing</label><label><input type="radio" name="a3" value="b"> Servis</label><label><input type="radio" name="a3" value="c"> Blocking</label></div>
+<button class="action" type="button" onclick="grade('formAwal',['b','a','c'],'awalResult')">Periksa jawaban</button><div id="awalResult" class="feedback" aria-live="polite"></div></form>
+<div><button class="action secondary" onclick="go('materi')">Pelajari materi →</button></div></section>
+
+<section id="materi" class="panel"><span class="tag">Pelajari konsep dan langkah</span><h2>Materi Pokok: Empat Teknik Dasar</h2>
+<div class="grid">
+<div class="card"><span class="tag">1 · Servis</span><h3>Memulai rally</h3><p><strong>Tujuan:</strong> mengirim bola ke area lawan untuk memulai permainan.</p><ol><li>Berdiri seimbang di belakang garis akhir.</li><li>Pegang atau lambungkan bola dengan terkendali.</li><li>Pukul bola menggunakan telapak tangan atau bagian tangan yang sesuai.</li><li>Arahkan melewati net dan ikuti gerak lanjutan dengan seimbang.</li></ol><p><strong>Ingat:</strong> mulai dari servis bawah jika masih pemula.</p></div>
+<div class="card"><span class="tag">2 · Passing bawah</span><h3>Menerima dan mengarahkan bola</h3><p><strong>Tujuan:</strong> menerima bola rendah dan mengarahkannya kepada teman.</p><ol><li>Kaki dibuka selebar bahu, lutut ditekuk.</li><li>Satukan kedua tangan; luruskan siku.</li><li>Rapatkan lengan bawah sebagai bidang pantul.</li><li>Gunakan dorongan dari kaki dan badan, bukan mengayun berlebihan.</li></ol><p><strong>Ingat:</strong> arahkan bahu dan bidang lengan ke sasaran.</p></div>
+<div class="card"><span class="tag">3 · Smash</span><h3>Serangan ke area lawan</h3><p><strong>Tujuan:</strong> memukul bola dengan kuat dan terarah ke area lawan.</p><ol><li>Awali dengan langkah awalan yang terkontrol.</li><li>Lakukan tolakan dua kaki sesuai kemampuan.</li><li>Ayunkan lengan pemukul dan pukul bola di titik yang nyaman.</li><li>Mendarat dengan lutut lentur dan seimbang.</li></ol><p><strong>Ingat:</strong> latihan lompatan dan pukulan dilakukan bertahap dengan pengawasan guru.</p></div>
+<div class="card"><span class="tag">4 · Blocking</span><h3>Membendung serangan</h3><p><strong>Tujuan:</strong> menghalangi bola serangan lawan di dekat net.</p><ol><li>Berdiri menghadap lawan dengan lutut sedikit ditekuk.</li><li>Amati arah bola dan gerak penyerang.</li><li>Lompat vertikal dengan kedua tangan terangkat dan jari terbuka.</li><li>Jaga tangan di area sendiri dan mendarat dengan aman.</li></ol><p><strong>Ingat:</strong> jangan menyentuh net atau mendarat di kaki pemain lain.</p></div>
+</div>
+<div class="callout"><strong>Keselamatan dan sportivitas:</strong> lakukan pemanasan, lepaskan perhiasan, gunakan lapangan yang tidak licin, jaga jarak, jangan mendorong atau menarik teman, dan berhenti jika merasa sakit. Sesuaikan latihan dengan kemampuan.</div>
+<h3>Ringkasan cepat</h3><div class="grid"><div class="card"><strong>Servis</strong><p>Memulai permainan.</p></div><div class="card"><strong>Passing bawah</strong><p>Menerima dan mengarahkan bola rendah.</p></div><div class="card"><strong>Smash</strong><p>Menyerang dengan pukulan terarah.</p></div><div class="card"><strong>Blocking</strong><p>Membendung serangan di dekat net.</p></div></div>
+<button class="action" onclick="go('simulasi')">Coba simulasi →</button></section>
+
+<section id="simulasi" class="panel"><span class="tag">Belajar dengan memilih tindakan</span><h2>Simulasi Situasi Permainan</h2><p class="lead">Baca situasi, pilih teknik yang paling sesuai, lalu periksa umpan baliknya.</p>
+<div class="stage"><div><div class="question"><p id="simPrompt">Situasi 1 dari 4: Tim kamu akan memulai rally. Apa yang dilakukan?</p><div id="simChoices"></div><div id="simFeedback" class="feedback" aria-live="polite"></div></div><div class="controlrow"><button class="action" onclick="checkSim()">Periksa pilihan</button><button class="action secondary" onclick="nextSim()">Situasi berikutnya →</button><button class="action secondary" onclick="resetSim()">Ulangi</button></div><p id="simCount">Situasi 1/4</p></div>
+<div class="court"><svg viewBox="0 0 420 300" role="img" aria-label="Ilustrasi sederhana lapangan bola voli"><rect x="15" y="15" width="390" height="270" rx="5" fill="#bfe6b8" stroke="#23794b" stroke-width="4"/><line x1="15" y1="150" x2="405" y2="150" stroke="#fff" stroke-width="7"/><line x1="15" y1="150" x2="405" y2="150" stroke="#23794b" stroke-width="2" stroke-dasharray="4 4"/><line x1="95" y1="15" x2="95" y2="285" stroke="#fff" stroke-width="3"/><line x1="325" y1="15" x2="325" y2="285" stroke="#fff" stroke-width="3"/><circle cx="210" cy="95" r="15" fill="#1769aa"/><circle cx="150" cy="215" r="15" fill="#1769aa"/><circle cx="270" cy="215" r="15" fill="#1769aa"/><circle cx="210" cy="175" r="12" fill="#ffc857" stroke="#704e00" stroke-width="2"/><text x="210" y="55" text-anchor="middle" fill="#17324d" font-size="13" font-weight="bold">TIM LAWAN</text><text x="210" y="265" text-anchor="middle" fill="#17324d" font-size="13" font-weight="bold">TIM KAMU</text></svg><p style="font-size:.9rem;color:#456">Ilustrasi lapangan, bukan animasi teknik tubuh.</p></div></div></section>
+
+<section id="kuis" class="panel"><span class="tag">Latihan mandiri</span><h2>Kuis Interaktif</h2><p class="lead">Jawab lima soal berikut. Setiap jawaban benar bernilai 20 poin.</p>
+<form id="formKuis">
+<div class="question"><p>1. Teknik untuk memulai rally adalah …</p><label><input type="radio" name="q1" value="a"> Smash</label><label><input type="radio" name="q1" value="b"> Servis</label><label><input type="radio" name="q1" value="c"> Blocking</label></div>
+<div class="question"><p>2. Bagian yang menjadi bidang pantul pada passing bawah adalah …</p><label><input type="radio" name="q2" value="a"> Telapak kaki</label><label><input type="radio" name="q2" value="b"> Ujung jari satu tangan</label><label><input type="radio" name="q2" value="c"> Kedua lengan bawah yang dirapatkan</label></div>
+<div class="question"><p>3. Saat mendarat setelah smash atau blocking, sebaiknya …</p><label><input type="radio" name="q3" value="a"> Mendarat dengan lutut lentur dan seimbang</label><label><input type="radio" name="q3" value="b"> Mendorong teman agar tidak bertabrakan</label><label><input type="radio" name="q3" value="c"> Mendarat dengan kaki kaku</label></div>
+<div class="question"><p>4. Tujuan utama blocking adalah …</p><label><input type="radio" name="q4" value="a"> Memulai rally</label><label><input type="radio" name="q4" value="b"> Membendung serangan lawan</label><label><input type="radio" name="q4" value="c"> Mengganti pemain</label></div>
+<div class="question"><p>5. Sikap yang menunjukkan sportivitas adalah …</p><label><input type="radio" name="q5" value="a"> Menyalahkan teman setiap kali gagal</label><label><input type="radio" name="q5" value="b"> Mengabaikan aturan keselamatan</label><label><input type="radio" name="q5" value="c"> Menghargai lawan dan bekerja sama</label></div>
+<button class="action" type="button" onclick="grade('formKuis',['b','c','a','b','c'],'kuisResult',20)">Nilai kuis</button><div id="kuisResult" class="feedback" aria-live="polite"></div></form>
+<button class="action secondary" onclick="go('akhir')">Lanjut asesmen akhir →</button></section>
+
+<section id="akhir" class="panel"><span class="tag">Buktikan pemahaman</span><h2>Asesmen Akhir</h2><p class="lead">Asesmen ini memadukan pengetahuan dan praktik. Hasil praktik dapat dicatat bersama guru.</p>
+<form id="formAkhir">
+<div class="question"><p>1. Jelaskan perbedaan tujuan servis dan passing bawah.</p><textarea name="u1" rows="3" required style="width:100%;padding:10px;border:1px solid #c4d5e0;border-radius:9px" placeholder="Servis digunakan untuk..., sedangkan passing bawah..."></textarea></div>
+<div class="question"><p>2. Sebutkan dua hal penting agar smash atau blocking lebih aman.</p><textarea name="u2" rows="3" required style="width:100%;padding:10px;border:1px solid #c4d5e0;border-radius:9px" placeholder="Pertama..., kedua..."></textarea></div>
+<div class="question"><p>3. Penilaian praktik oleh guru (beri tanda setelah diamati):</p>
+<label><input type="checkbox" name="p1"> Servis: sikap awal dan pukulan terkontrol</label><label><input type="checkbox" name="p2"> Passing bawah: lengan rapat dan arah bola terkendali</label><label><input type="checkbox" name="p3"> Smash: awalan/tolakan sesuai kemampuan dan pendaratan aman</label><label><input type="checkbox" name="p4"> Blocking: posisi tangan tepat dan tidak menyentuh net</label><label><input type="checkbox" name="p5"> Menunjukkan kerja sama dan sportivitas</label></div>
+<button class="action" type="button" onclick="submitAkhir()">Simpan asesmen</button><div id="akhirResult" class="feedback" aria-live="polite"></div></form>
+<div class="callout">Rubrik praktik yang disarankan: 4 = sangat baik dan konsisten; 3 = baik dengan sedikit arahan; 2 = mulai berkembang dan perlu bimbingan; 1 = perlu latihan terbimbing. Guru dapat menilai tiap aspek sesuai kondisi peserta didik.</div>
+<button class="action secondary" onclick="go('refleksi')">Menuju refleksi →</button></section>
+
+<section id="refleksi" class="panel"><span class="tag">Pikirkan pengalaman belajar</span><h2>Refleksi Diri</h2><p class="lead">Jawablah dengan jujur. Tujuannya mengetahui kemajuan dan langkah latihan berikutnya.</p>
+<form id="formRef">
+<div class="question"><p>1. Teknik yang paling saya pahami adalah …</p><select name="r1" required><option value="">Pilih teknik</option><option>Servis</option><option>Passing bawah</option><option>Smash</option><option>Blocking</option></select></div>
+<div class="question"><p>2. Hal yang masih perlu saya latih …</p><textarea name="r2" rows="3" required style="width:100%;padding:10px;border:1px solid #c4d5e0;border-radius:9px" placeholder="Saya masih perlu berlatih..."></textarea></div>
+<div class="question"><p>3. Saat berlatih, saya …</p><label><input type="radio" name="r3" value="mandiri" required> Sudah bisa mencoba dengan mandiri</label><label><input type="radio" name="r3" value="bimbingan"> Masih memerlukan bimbingan</label><label><input type="radio" name="r3" value="teman"> Terbantu melalui latihan bersama teman</label></div>
+<div class="question"><p>4. Saya menjaga keselamatan dan menghargai teman.</p><label><input type="radio" name="r4" value="selalu" required> Selalu</label><label><input type="radio" name="r4" value="kadang"> Kadang-kadang</label><label><input type="radio" name="r4" value="belum"> Belum konsisten</label></div>
+<button class="action" type="button" onclick="submitRef()">Simpan refleksi</button><div id="refResult" class="feedback" aria-live="polite"></div></form>
+<button class="action gold" onclick="window.print()">Cetak / Simpan PDF</button><button class="action secondary" onclick="go('apersepsi')">Kembali ke awal ↺</button>
+</section>
+</main></div><footer>MPI PJOK Kelas VII · Kurikulum Merdeka · HASNIAR, S.Pd. · SMP Negeri 8 Kolaka Utara</footer>
+<script>
+const navBtns=[...document.querySelectorAll('nav button[data-page]')];
+function go(id){document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));navBtns.forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo({top:0,behavior:'smooth'});}
+navBtns.forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));
+function saveText(id,out){const v=document.getElementById(id).value.trim();document.getElementById(out).textContent=v?'Jawaban tersimpan pada halaman ini.':'Silakan tulis jawaban terlebih dahulu.';document.getElementById(out).className='feedback '+(v?'ok':'no')}
+function grade(formId,keys,outId,each){const form=document.getElementById(formId);let score=0,answered=0;keys.forEach((k,i)=>{const n=(formId==='formAwal'?'a':'q')+(i+1);const sel=form.querySelector('input[name="'+n+'"]:checked');if(sel){answered++;if(sel.value===k)score++}});const out=document.getElementById(outId);if(answered<keys.length){out.textContent='Lengkapi semua soal dahulu ('+answered+'/'+keys.length+' terjawab).';out.className='feedback no';return}const points=each?score*each:Math.round(score/keys.length*100);out.innerHTML='Skor: '+points+(each?' / 100':' / 100')+'. Jawaban benar: '+score+' dari '+keys.length+'. '+(score===keys.length?'Hebat! Semua jawaban benar.':score>=Math.ceil(keys.length*.6)?'Bagus, tinjau kembali jawaban yang belum tepat.':'Ayo pelajari lagi materi, lalu coba kembali.');out.className='feedback '+(score>=Math.ceil(keys.length*.6)?'ok':'no')}
+const sims=[
+{p:'Situasi 1 dari 4: Tim kamu akan memulai rally. Apa yang dilakukan?',c:['Servis','Passing bawah','Blocking'],a:0,f:'Servis digunakan untuk memulai rally.'},
+{p:'Situasi 2 dari 4: Bola lawan datang rendah ke arahmu. Apa pilihan terbaik?',c:['Smash','Passing bawah','Blocking'],a:1,f:'Tekuk lutut dan rapatkan lengan bawah untuk mengarahkan bola.'},
+{p:'Situasi 3 dari 4: Bola umpan berada dekat net dan tim siap menyerang. Teknik serangan apa yang digunakan?',c:['Passing bawah','Servis','Smash'],a:2,f:'Smash adalah pukulan serangan. Lakukan secara bertahap dan mendarat seimbang.'},
+{p:'Situasi 4 dari 4: Pemain lawan melakukan serangan dekat net. Apa upaya membendungnya?',c:['Blocking','Servis','Passing bawah'],a:0,f:'Blocking dilakukan dekat net dengan tangan terangkat; hindari menyentuh net dan jaga ruang pendaratan.'}
+];let simIndex=0;
+function renderSim(){document.getElementById('simPrompt').textContent=sims[simIndex].p;document.getElementById('simChoices').innerHTML=sims[simIndex].c.map((x,i)=>'<label style="display:block;padding:6px"><input type="radio" name="sim" value="'+i+'"> '+x+'</label>').join('');document.getElementById('simFeedback').textContent='';document.getElementById('simCount').textContent='Situasi '+(simIndex+1)+'/4'}
+function checkSim(){const v=document.querySelector('input[name="sim"]:checked');const out=document.getElementById('simFeedback');if(!v){out.textContent='Pilih satu jawaban dahulu.';out.className='feedback no';return}const correct=Number(v.value)===sims[simIndex].a;out.textContent=(correct?'Benar! ':'Belum tepat. ')+sims[simIndex].f;out.className='feedback '+(correct?'ok':'no')}
+function nextSim(){simIndex=(simIndex+1)%sims.length;renderSim()}function resetSim(){simIndex=0;renderSim()}renderSim();
+function submitAkhir(){const f=document.getElementById('formAkhir');const u1=f.u1.value.trim(),u2=f.u2.value.trim();if(!u1||!u2){document.getElementById('akhirResult').textContent='Isi kedua jawaban uraian terlebih dahulu.';document.getElementById('akhirResult').className='feedback no';return}const checked=f.querySelectorAll('input[type=checkbox]:checked').length;document.getElementById('akhirResult').textContent='Asesmen tersimpan pada halaman ini. Checklist praktik: '+checked+'/5 aspek ditandai. Jawaban uraian perlu ditinjau guru; checklist bukan penilaian otomatis atas keterampilan.';document.getElementById('akhirResult').className='feedback ok'}
+function submitRef(){const f=document.getElementById('formRef');if(!f.reportValidity())return;document.getElementById('refResult').textContent='Refleksi berhasil dicatat pada halaman ini. Gunakan jawabanmu untuk menentukan latihan berikutnya.';document.getElementById('refResult').className='feedback ok'}
+</script></body></html>
